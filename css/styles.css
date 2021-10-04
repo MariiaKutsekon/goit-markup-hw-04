@@ -6,6 +6,7 @@
     --color-btn:#F5F4FA;
     --color-footer:#2F303A;
     --adre-contacts:rgba(255, 255, 255, 0.6);
+    --client-color: #AFB1B8;
     }
 
     p,h1,h2,h3,h4,h5,h6{
@@ -21,7 +22,7 @@
         height: auto;
     
     }
-    .body { 
+    body { 
         font-size: 14px;
         font-family: 'Roboto', sans-serif;
         letter-spacing: 0.03em;
@@ -74,7 +75,7 @@ padding-bottom: 32px;
 
 /*----------------контакти верхни --------------*/
 /*.header-mail*/
-
+/*
 .contacts-list::before {
 content: "klml;m";
 display: inline-block;
@@ -84,6 +85,7 @@ background-color: rgb(124, 37, 37);
 color: yellow;
 margin-right: 10px;
 }
+*/
 
 .header-contacts{
 display: flex;
@@ -237,17 +239,20 @@ height: 70px;
     background-color:var(--color-btn);
     border-radius: 4px;
     
+}*/
+.advantage-item-img{
+    background-color:var(--color-btn);
+    border-radius: 4px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
 }
-*/
+.advantage-icon{
+
+}
 /*
-.advantage-item:not(:last-child){
-    margin-right: 50px;
-}
-.advantage-title{
-    text-align: left;
-    padding-right: 26px;
-    }
-*/
 .advantage-img::before{
 content: "";
 display: block;
@@ -270,18 +275,21 @@ background-image: url(../images/img.sec.s/diagram.svg);
 .advantage-img.astronaut::before{
 background-image: url(../images/img.sec.s/astronaut.svg);
 }
-
+*/
 .advantage-title-text{
 font-weight: 700;
 line-height: 1.14;
+font-size: 14px;
 color: var(--secondary-title-color);
 text-transform: uppercase;
 margin-bottom: 10px;
+font-style: normal;
 }
 
 .advantage-text{
 font-weight: 400;
 line-height: 1.71;
+font-size: 14px;
 color:var(--primery-text-color);
 
 }
@@ -324,7 +332,7 @@ margin-right: 30px;
     width: calc(100% / 3 -30px);
 }
 
-    /*--------------------третя секція  команда------*/
+    /*--------------------четверта секція  команда------*/
 
 .team{
 padding-top: 102px;
@@ -386,11 +394,15 @@ text-align: center;
 margin-bottom: 16px;
 /*margin-bottom: 30px;*/
 }
-/* -------------------соцыальны мережи ЛІІІ----------*/
+/* -------------------соц. мережи ЛІІІ----------*/
+.team-item-list{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
 .social-list{
  display: flex;
- justify-content: center;
- outline:1px solid red;
  }
 
 .social-item{
@@ -399,15 +411,123 @@ height: 44px;
 }
 .social-item + .social-item{
     margin-left: 10px;
+} /*
+.social-icon{
+    fill: var(--client-color);*
 }
-/*----задавання ефектив на ссилку----*/
+/*----ефекты на ссылку----*/
 .social-link{
     width: 100%;
     height: 100%;
-    display: block;
-    border-radius: 4px;
-    background-color:#2196F3
+    display: flex;
+    border-radius: 50%;
+    fill: var(--client-color);
+    background-color: var(--primary-title-color);
+    justify-content: center;
+    align-items: center;
     }
+    .social-link:hover,
+    .social-link:focus{
+        background-color: var(--accent-color);
+        fill: var(--primary-title-color);
+    }  /*
+    .social-link:hover,
+    .social-link:focus{
+        
+    }
+
+
+    /*----------нашы постоянные клиенты-----------*/
+    /*.client-title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        color: var(--secondary-title-color);
+        margin-bottom: 50px;
+    }
+
+    .client-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+       
+    .client-item {
+        width: calc(100% / 6 -30px);
+    }
+    .client-link{
+        border: 1px solid var(--client-color);
+        border-radius: 4px;
+        background-color: transparent;
+        display: flex; 
+        align-items: center;  
+        justify-content: center;
+        width: 170px;
+        height: 92px;
+    }
+    .client-icon {
+        width: 106px;
+        height: 60px;
+        fill: var(--client-color);
+    }
+    
+    .client-link:hover,
+    .client-link:focus {
+        border-color: var(--accent-color);
+    }
+    .client-link:hover .client-icon,
+    .client-link:focus .client-icon{
+       fill: var(--accent-color);
+    }
+*/
+ .client-title{
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.client-list{
+display: flex;
+margin-left: -30px;
+flex-wrap: wrap;
+}
+
+.client-item{
+width: 170px;
+height: 92px;
+border: 1px solid #AFB1B8; 
+padding-right: 32px;
+padding-left: 32px;
+cursor: pointer;
+}
+
+.client-item{
+width: calc(100% / 6 - 30px);
+margin-left: 30px;
+ }
+
+ .client-item:hover,
+ .client-item:focus{
+ border-color: var(--accent-color);
+}
+.client-icon {
+width: 100%;
+height: 100%;
+fill: var(--client-color);
+}
+
+ .client-link:hover,
+ .client-link:focus {
+fill: var(--accent-color);
+ }
+ 
+.client-icon:hover,
+.client-icon:focus{
+fill:var(--accent-color)
+}
 
 
 /*-----footer---*/
@@ -437,11 +557,23 @@ color:var(--primary-title-color);
 color:var(--adre-contacts);
 } 
 
-.logo-footer{
-    
+.footer-item {
+    display: flex;
+    align-items: flex-start;
+    }
+.foter-right{
+    display: flex;
+    align-items: center;
+    justify-content:center;
 }
 
-
+.foter-text{
+font-weight: bold;
+font-size: 14px;
+line-height: 1.14;
+text-transform: uppercase;
+color: var(--primary-title-color);
+}
 
 
 /*----------навігація по портфоліо кнопки----------------*/
