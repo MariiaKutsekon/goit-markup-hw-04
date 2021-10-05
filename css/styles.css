@@ -7,6 +7,7 @@
     --color-footer:#2F303A;
     --adre-contacts:rgba(255, 255, 255, 0.6);
     --client-color: #AFB1B8;
+    --footer-social-icon:#44454E;
     }
 
     p,h1,h2,h3,h4,h5,h6{
@@ -74,19 +75,6 @@ padding-bottom: 32px;
 }
 
 /*----------------контакти верхни --------------*/
-/*.header-mail*/
-/*
-.contacts-list::before {
-content: "klml;m";
-display: inline-block;
-width: 16px;
-height: 12px;
-background-color: rgb(124, 37, 37);
-color: yellow;
-margin-right: 10px;
-}
-*/
-
 .header-contacts{
 display: flex;
 margin-left: auto;
@@ -128,7 +116,21 @@ display: flex;
 .logo-item{
     margin-right: 93px;
 }
+.contacts-list{
+justify-content: center;
+align-items: center;
+cursor: pointer;
+fill: var(--primery-text-color);
+}
 
+.contacts-icon{
+margin-right: 10px;
+}
+
+.contacts-icon:hover,
+.contacts-icon:focus{
+fill: var(--accent-color);
+}
 /*---------------ховери та фокус------------------*/
 .header-contacts-link:hover,.header-link:hover,
 .header-contacts-link:focus,.header-link:focus,.current-link
@@ -167,21 +169,15 @@ color:var(--secondary-title-color);
 }
 
 .section-hero{
-    /*Drop shadow 
-X0 Y4 B4 S0 rgba(0, 0, 0, 0,25) даные с фигма*/
 background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
 url(../images/back.Img1.jpg);
 background-repeat: no-repeat;
 background-position: center;
-/*
-background-size: cover;*/
 padding-top: 200px;
 padding-bottom: 200px;
 text-align: center;
-font-family: 'Roboto', sans-serif;
+/*box-shadow:*/
 }
-
-
 .pre-title{
 font-weight: 900;
 font-size: 44px;
@@ -227,19 +223,7 @@ flex-wrap: wrap;
 margin-left: 30px;
 margin-top: 30px;
 }
-/*
-.advantage-img{
-width: 70px;
-height: 70px;
-}
-.advantage-img-item{
-    width: 100%;
-    height: 100%;
-    display: block;
-    background-color:var(--color-btn);
-    border-radius: 4px;
-    
-}*/
+
 .advantage-item-img{
     background-color:var(--color-btn);
     border-radius: 4px;
@@ -297,7 +281,6 @@ color:var(--primery-text-color);
 /*третя секція*/
 /*--------representation----------*/
 .representation{
-/*margin-bottom: 94px;*/
 padding-top: 0;
 }
 
@@ -316,16 +299,6 @@ flex-wrap: wrap;
 margin-left: -30px;
 margin-top: -30px;
 }
-/*
-.representation-item-img{
-margin-top: 15px;
-}
-*/
-/*
-.representation-item-img:not(:nth-child(3n+3)){
-margin-right: 30px;
-}
-*/
 .representation-item-img{
     margin-left: 30px;
     margin-top: 30px;
@@ -339,11 +312,7 @@ padding-top: 102px;
 padding-bottom: 94px;
 background-color: var(--color-btn);
 }
-/*
-.position{
-    display: flex;
-    background-color: lightsalmon;
-*/
+
 
 .list-of-team{
 display: flex;
@@ -359,13 +328,14 @@ margin-top: 30px;
 width: calc(100% / 4 - 30px);
 border: 1px solid #EEEEEE;
 background-color: var(--primary-title-color);
+box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px 
+rgba(0, 0, 0, 0.2);
+border-radius: 0px 0px 4px 4px;
 }
 
 
-/*:not(:last-child){
-margin-right: 30px;
-}
-*/
+
 .representation-team{
 font-weight: 700;
 font-size: 36px;
@@ -391,7 +361,9 @@ font-size: 16px;
 line-height: 1.9;
 color: var(--primery-text-color);
 text-align: center;
-margin-bottom: 16px;
+margin-bottom: 10px;
+margin-top: -10px;
+
 /*margin-bottom: 30px;*/
 }
 /* -------------------соц. мережи ЛІІІ----------*/
@@ -411,11 +383,7 @@ height: 44px;
 }
 .social-item + .social-item{
     margin-left: 10px;
-} /*
-.social-icon{
-    fill: var(--client-color);*
-}
-/*----ефекты на ссылку----*/
+} 
 .social-link{
     width: 100%;
     height: 100%;
@@ -430,58 +398,11 @@ height: 44px;
     .social-link:focus{
         background-color: var(--accent-color);
         fill: var(--primary-title-color);
-    }  /*
-    .social-link:hover,
-    .social-link:focus{
-        
-    }
+    } 
 
 
     /*----------нашы постоянные клиенты-----------*/
-    /*.client-title {
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 1.16;
-        text-align: center;
-        color: var(--secondary-title-color);
-        margin-bottom: 50px;
-    }
-
-    .client-list{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-       
-    .client-item {
-        width: calc(100% / 6 -30px);
-    }
-    .client-link{
-        border: 1px solid var(--client-color);
-        border-radius: 4px;
-        background-color: transparent;
-        display: flex; 
-        align-items: center;  
-        justify-content: center;
-        width: 170px;
-        height: 92px;
-    }
-    .client-icon {
-        width: 106px;
-        height: 60px;
-        fill: var(--client-color);
-    }
     
-    .client-link:hover,
-    .client-link:focus {
-        border-color: var(--accent-color);
-    }
-    .client-link:hover .client-icon,
-    .client-link:focus .client-icon{
-       fill: var(--accent-color);
-    }
-*/
  .client-title{
     font-size: 36px;
     line-height: 1.16;
@@ -557,24 +478,63 @@ color:var(--primary-title-color);
 color:var(--adre-contacts);
 } 
 
+
+/*---------------соціальні мережи футер------------------*/
 .footer-item {
     display: flex;
     align-items: flex-start;
     }
-.foter-right{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
 
-.foter-text{
+.footer-right{
+align-items: flex-start;
+margin-left: 70px;
+    }
+
+.footer-text{
+font-style: normal;
 font-weight: bold;
 font-size: 14px;
 line-height: 1.14;
 text-transform: uppercase;
 color: var(--primary-title-color);
+margin-bottom: 20px;
 }
 
+.footer-item-list{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+
+.footer-social-list{
+ display: flex;
+ }
+
+.footer-social-item{
+width: 44px;
+height: 44px;
+}
+.footer-social-item + .footer-social-item{
+    margin-left: 10px;
+} 
+
+/*----ефекты на ссылку----*/
+.footer-social-link{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 50%;
+    fill: var(--primary-title-color);
+    background-color: var(--footer-social-icon);
+    justify-content: center;
+    align-items: center;
+    box-shadow:(0px 4px 4px rgba(0, 0, 0, 0.25));
+    }
+    .footer-social-link:hover,
+    .footer-social-link:focus{
+        background-color: var(--accent-color);
+        fill: var(--primary-title-color);
+    }  
 
 /*----------навігація по портфоліо кнопки----------------*/
 .portfolio-button{
@@ -613,14 +573,6 @@ color: var(--primary-title-color);
 
 }
 
-/*
-{
-font-weight: 500;
-font-size: 16px;
-line-height: 1.62;
-color: var(--secondary-title-color);
-}
-*/
 /*продукд*/
 
 
