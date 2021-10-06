@@ -571,8 +571,8 @@ border-radius: 4px;
 background-color: var(--accent-color); 
 color: var(--primary-title-color);
 }
-.product-name:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+.product-text {
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
   }
 /*продукд*/
 
@@ -591,6 +591,7 @@ line-height: 1.71;
 letter-spacing: 0.06em;
 color: var(--secondary-title-color);
 margin-top: 20px;
+margin-bottom: 4px;
 }
 
 .product-list{
@@ -598,16 +599,17 @@ font-weight: 500;
 font-size: 16px;
 line-height: 1.87;
 color: var(--primery-text-color);
-margin-top: 4px;
+
 }
 
 .product-name{
 margin-left: 30px;
 margin-top: 30px;
 width: calc(100% / 3 - 30px);
-border-bottom: 1px solid #EEEEEE;
 }
 
 .product-text{
-    padding: 20px 20px;
+    padding: 20px 24px;
+    border: 1px solid #EEEEEE;
+    border-top: none;
 }
