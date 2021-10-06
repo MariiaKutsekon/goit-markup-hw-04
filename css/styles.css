@@ -570,9 +570,10 @@ border-radius: 4px;
 .portfolio-btn:focus,.current-btn {
 background-color: var(--accent-color); 
 color: var(--primary-title-color);
-
 }
-
+.product-name:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
 /*продукд*/
 
 
@@ -607,3 +608,6 @@ width: calc(100% / 3 - 30px);
 border-bottom: 1px solid #EEEEEE;
 }
 
+.product-text{
+    padding: 20px 20px;
+}
